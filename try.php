@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Usage of UTF8 strings</title>
 </head>
 
 <body>
@@ -18,17 +18,17 @@
 	echo '<pre>'.print_r($list,true).'</pre>';
 
 
-// Comunica a PHP che useremo stringhe UTF-8 fino alla fine dello script
+// tells to php that we will use utf-8 strings until the end of the script
 mb_internal_encoding('UTF-8');
 
-// Comunica a PHP che invieremo stringhe UTF-8 al browser
+// tells to php that we will send utf-8 strings to the browser
 mb_http_output('UTF-8');
 
-// La nostra stringa UTF-8 di test
+// our test string utf-8
 $string = 'Êl síla erin lû e-govaned vîn. æøå ';
 
-// Trasforma la stringa in qualche modo con una funzione multibyte
-// Nota come, a scopo dimostrativo, tagliamo la stringa a un carattere non ASCII
+// transform our string with a multibyte function
+// Note how , for demonstrating purpouse, we cut the string in a non ASCII character
 $string = mb_substr($string, 0, 35);
 echo $string;
 ?>
